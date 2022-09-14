@@ -27,15 +27,21 @@ def bills(value):
 	# TODO: Calculez le nombre de billets de 20$, 10$ et 5$ et pièces de 1$ à remettre pour représenter la valeur.
 	while value != 0:
 		if value >= 20:
-			pass
+			twenties=value//20
+			value=value%20
 		elif value >= 10:
-			pass
+			tens=value//10
+			value=value%10
 		elif value >= 5:
-			pass
+			fives=value//5
+			value=value%5
+		elif value >= 2:
+			twos=value//2
+			value=value%2
 		elif value >= 1:
-			pass
+			ones=value
 
-	return (twenties, tens, fives, twos, ones);
+	return twenties, tens, fives, twos, ones
 
 def format_base(value, base, digit_letters):
 	# Formater un nombre dans une base donné en utilisant les lettres fournies pour les chiffres<
@@ -56,3 +62,4 @@ if __name__ == "__main__":
 	print(average([1, 4, -2, 10]))
 	print(bills(137))
 	print(format_base(-42, 16, "0123456789ABCDEF"))
+
