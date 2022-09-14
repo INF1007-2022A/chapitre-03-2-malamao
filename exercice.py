@@ -35,22 +35,21 @@ def bills(value):
 		elif value >= 5:
 			fives=value//5
 			value=value%5
-		elif value >= 2:
-			twos=value//2
-			value=value%2
 		elif value >= 1:
 			ones=value
+			value=0
 
-	return twenties, tens, fives, twos, ones
+	return (twenties, tens, fives, ones);
 
 def format_base(value, base, digit_letters):
 	# Formater un nombre dans une base donné en utilisant les lettres fournies pour les chiffres<
 	# `digits_letters[0]` Nous donne la lettre pour le chiffre 0, ainsi de suite.
+
 	result = ""
 	abs_value = abs(value)
 	while abs_value != 0:
 		pass
-	if value < 0:
+	if value< 0:
 		# TODO: Ne pas oublier d'ajouter '-' devant pour les nombres négatifs.
 		pass
 	return result
