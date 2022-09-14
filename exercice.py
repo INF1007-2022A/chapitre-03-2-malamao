@@ -15,8 +15,13 @@ def orthogonal(v1, v2):
 
 def average(values):
 	# TODO: Calculer la moyenne des valeurs positives (on ignore les valeurs strictement négatives).
+	somme=0
+	nb=0
 	for v in values:
-		pass # La variable v contient une valeur de la liste.
+		if v>0:
+			somme=somme+v
+			nb=nb+1
+	return somme/nb
 
 def bills(value):
 	# TODO: Calculez le nombre de billets de 20$, 10$ et 5$ et pièces de 1$ à remettre pour représenter la valeur.
